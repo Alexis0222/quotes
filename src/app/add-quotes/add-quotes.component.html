@@ -1,0 +1,11 @@
+<div>
+  <label>Cita</label>
+<input id="quote" [(ngModel)]="quote.quote" placeholder="Agregue su cita aqui">
+  <label>Autor</label>
+  <input id="author" [(ngModel)]="quote.author" placeholder="Agregue su author aqui">
+
+<button class="add-button" (click)="addQuote(quote)" >
+  Agregar cita
+</button>
+
+</div>

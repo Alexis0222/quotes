@@ -1,0 +1,41 @@
+
+
+<div class="author-quote-wrap">
+  <li *ngFor="let item of quoteArray; let i = index">
+
+    <input class="toggle-quote" type="radio" id="AQ-{{i+1}}" name="quote" checked>
+
+    <div class="author-quote">
+      <div class="pull-left author-photo photo-a animated bounceInLeft">
+        <div class="navigate">
+
+          <div class="container" *ngIf="i==0; else noCourses">
+
+          <label class="label left" for="AQ-{{(quoteArray.length-1)}}">&nbsp;</label>
+          </div>
+
+          <div class="container" *ngIf="i==(quoteArray.length)">
+
+            <label class="label left" for="AQ-{{(i-1)}}">&nbsp;</label>
+          </div>
+
+          <ng-template #noCourses>
+            <label class="label left" for="AQ-{{(quoteArray.length-1)}}">&nbsp;</label>
+          </ng-template>
+
+          <label class="label right" for="AQ-{{i}}">&nbsp;</label>
+        </div>
+      </div>
+      <div class="pull-right quote-content">
+        <div class="clearfix animated zoomIn">
+          <div class="quote-like pull-right">
+            <span class="love"></span> {{item.id}}
+          </div>
+          </div>
+        <div class="quote-text animated rotateInDownRight"> {{item.quote}}</div>
+        <div class="quote-author animated lightSpeedIn"> {{item.author}} </div>
+      </div>
+    </div>
+
+  </li>
+</div>

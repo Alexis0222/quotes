@@ -1,0 +1,9 @@
+{
+  "/quotes":{
+    "target":"https://ancient-refuge-95273.herokuapp.com/quotes",
+    "secure":true,
+    "pathRewriter":{
+      "^/quotes":""
+    },"changeOrigin":true
+  }
+}
